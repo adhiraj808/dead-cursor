@@ -84,13 +84,12 @@ class MouseJiggler:
             
             # Optional click
             if random.random() > 0.7:
-                pyautogui.click()
-            
-            # Small random sleeps between moves
-            time.sleep(random.uniform(1, 3))
+                # pyautogui.click() // random click in random time between 1 and 3 seconds which is disabled for now
+                # Small random sleeps between moves
+                time.sleep(random.uniform(1, 3))
             
         self.is_jiggling = False
-        print("Jiggle session ended.")
-        self.last_activity_time = time.time()
+        print("Jiggle session ended.")  # Print when jiggle session ends
+        self.last_activity_time = time.time()  # Update last activity time
 
-jiggler_instance = MouseJiggler()
+jiggler_instance = MouseJiggler()  # Create instance for external access
